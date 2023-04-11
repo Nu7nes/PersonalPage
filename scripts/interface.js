@@ -76,7 +76,7 @@ function renderProjects(obj) {
                                 <p>${project.theme}</p>
                             </div>
                             <figure>
-                                <img src="/assets/project-${nameReplaced}.png" alt="Project">
+                                <img src="assets/project-${nameReplaced}.png" alt="Project">
                                 <div class="img-links">
                                     ${renderProjectLinks(project.links)}
                                 </div>
@@ -92,7 +92,7 @@ function renderProjects(obj) {
                                 <p>Estudo de: <br>- <strong style="color: #000000">${project.theme}</strong></p>
                             </div>
                             <figure>
-                                <img src="/assets/project-${nameReplaced}.png" alt="Project">
+                                <img src="assets/project-${nameReplaced}.png" alt="Project">
                                 <div class="img-links">
                                     ${renderProjectLinks(project.links)}
                                 </div>
