@@ -116,19 +116,19 @@ function renderProjectLinks(array) {
                                     <span class="material-symbols-outlined">
                                         find_in_page
                                     </span>
-                                    <a href="${array[0]}">Repositório</a>
+                                    <a href="${array[0]}" target="_blank">Repositório</a>
                                 </div>
                                 <div>
                                     <span class="material-symbols-outlined">
                                         web
                                     </span>
-                                    <a href="${array[1]}">Prévia</a>
+                                    <a href="${array[1]}" target="_blank">Prévia</a>
                                 </div>`;
         if (array[0]) return `<div>
                                     <span class="material-symbols-outlined">
                                         find_in_page
                                     </span>
-                                    <a href="${array[0]}">Repositório</a>
+                                    <a href="${array[0]}" target="_blank">Repositório</a>
                                 </div>`;
         if (array.length < 1) return '';
 }
