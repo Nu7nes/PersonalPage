@@ -65,6 +65,10 @@ main {
 .nav-column {
     display: none;
 }
+.nav-column>div>p {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
 
 .logo-img {
     cursor: pointer;
@@ -261,7 +265,7 @@ a {
 .projects-area>section {
     margin-top: 3vh;
     display: flex;
-    gap: 4vw;
+    gap: 3vw;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -269,7 +273,7 @@ a {
 
 .projects {
     position: relative;
-    width: 200px;
+    width: 350px;
     height: 200px;
     border-radius: 5px;
     display: flex;

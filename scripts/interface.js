@@ -25,6 +25,12 @@ function mobileScreen() {
     navColumn.innerHTML = navOrigin;
 }
 
+function clearColorize() {
+    document.querySelectorAll(".icons-events").forEach((icon) => {
+        icon.classList.remove("colored");
+    });
+}
+
 function renderTechs(obj) {
     let element = document.getElementById("my-techs");
 
@@ -57,11 +63,7 @@ function renderTechs(obj) {
         iconElement.appendChild(descElement);
     });
 }
-function clearColorize() {
-    document.querySelectorAll(".icons-events").forEach((icon) => {
-        icon.classList.remove("colored");
-    });
-}
+
 
 async function renderProjects() {
     let projectsDiv = document.getElementById("personal-projects");
@@ -94,26 +96,4 @@ function renderIconTechs(array) {
         result += `<i id="${array[i]}" class="devicon-${array[i]}-plain colored"></i>`
     }
     return result;
-}
-
-function renderProjectLinks(array) {
-        if (array[1]) return `<div>
-                                    <span class="material-symbols-outlined">
-                                        find_in_page
-                                    </span>
-                                    <a href="${array[0]}" target="_blank">Repositório</a>
-                                </div>
-                                <div>
-                                    <span class="material-symbols-outlined">
-                                        web
-                                    </span>
-                                    <a href="${array[1]}" target="_blank">Prévia</a>
-                                </div>`;
-        if (array[0]) return `<div>
-                                    <span class="material-symbols-outlined">
-                                        find_in_page
-                                    </span>
-                                    <a href="${array[0]}" target="_blank">Repositório</a>
-                                </div>`;
-        if (array.length < 1) return '';
 }

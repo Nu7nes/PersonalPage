@@ -1,0 +1,32 @@
+
+.container {
+    width: 100% !important;
+}
+
+main {
+    position: relative;
+}
+
+.navbar {
+    z-index: 0 !important;
+}
+
+.nav-toggle {
+    display: none !important;
+    background-color: transparent;
+    border: none;
+}
+
+.navbar-links {
+    display: block !important;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 1rem;
+}
+.nav-link>span {
+    font-size: 0.8rem;
+}
