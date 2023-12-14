@@ -6,7 +6,6 @@ window.addEventListener("DOMContentLoaded", () => {
         if (widthScreen < 600) mobileScreen();
     });
     window.addEventListener("scroll", () => {
-        console.log(window.scrollY);
         if (window.scrollY > 10) {
             document.getElementById('navbar').classList.remove('navbar-transparent');
         } else {

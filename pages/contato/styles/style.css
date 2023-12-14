@@ -1,20 +1,17 @@
+* {
+    color: #000;
+}
+
+body {
+    height: 100vh;
+}
 
 .container {
     width: 100% !important;
 }
 
-main {
-    position: relative;
-}
-
-.navbar {
-    z-index: 0 !important;
-}
-
 .nav-toggle {
     display: none !important;
-    background-color: transparent;
-    border: none;
 }
 
 .navbar-links {
@@ -26,7 +23,185 @@ main {
     align-items: center;
     gap: 0.4rem;
     font-size: 1rem;
+    color: #fff;
 }
-.nav-link>span {
+.nav-link > span {
     font-size: 0.8rem;
+    color: #fff;
+}
+
+main {
+    margin: 3.5rem 2rem 0 2rem;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+article {
+    display: flex;
+    border-radius: 1rem;
+    max-width: 600px;
+    margin-left: 5rem;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section > p {
+    align-self: flex-start;
+}
+
+section > div {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    gap: 1rem;
+}
+
+section > div > h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+section > div > svg {
+    width: 3rem;
+    height: 3rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* input styles */
+.input-container {
+    position: relative;
+    margin: 1rem auto;
+    width: 100%;
+}
+
+.input-container input[type="text"],
+.input-container input[type="email"],
+.input-container textarea {
+    font-size: 20px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 5px 0;
+    background-color: transparent;
+    outline: none;
+}
+
+.input-container .label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ccc;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.input-container textarea .label {
+    color: #ccc;
+}
+
+.input-container input[type="text"]:focus ~ .label,
+.input-container input[type="email"]:focus ~ .label,
+.input-container textarea:focus ~ .label,
+.input-container textarea:valid ~ .label,
+.input-container input[type="text"]:valid ~ .label,
+.input-container input[type="email"]:valid ~ .label {
+    top: -20px;
+    font-size: 16px;
+    color: #2972dd;
+}
+
+.input-container .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #2972dd;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+}
+
+.input-container textarea ~ .underline {
+    bottom: 3px;
+}
+
+.input-container input[type="text"]:focus ~ .underline,
+.input-container input[type="email"]:focus ~ .underline,
+.input-container textarea:focus ~ .underline,
+.input-container textarea:valid ~ .underline,
+.input-container input[type="text"]:valid ~ .underline,
+.input-container input[type="email"]:valid ~ .underline {
+    transform: scaleX(1);
+}
+/*  */
+
+.input-textarea {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem 0;
+    gap: 0.5rem;
+}
+
+.sendButton {
+    width: 100%;
+    height: 3rem;
+    border: none;
+    border-radius: 20px;
+    background-color: #2972dd;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+.sendButton:hover {
+    background-color: #fff;
+    background-color: #114799;
+    transition: all 0.3s ease-in-out;
+}
+
+cite {
+    color: #727272;
+    font-size: 0.8rem;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 1000px) {
+    
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        width: 100% !important;
+    }
+
+    main {
+        flex-direction: column;
+    }
+    article {
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+    section>div>h1 {
+        font-size: 3rem;
+    }
 }

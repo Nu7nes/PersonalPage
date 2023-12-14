@@ -8,14 +8,3 @@ window.addEventListener('DOMContentLoaded', () => {
         }, 5);
     })
 })
-
-function closeNav() {
-    let nav = document.getElementById('nav-column-toggle');
-    nav.style.animation = '';
-    setTimeout(() => {
-        nav.style.animation = 'nav-toggle-animation-hide 200ms ease-out';
-        setTimeout(() => {
-            nav.classList.remove('nav-active');
-        }, 180)
-    }, 5);
-}

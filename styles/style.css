@@ -262,6 +262,7 @@ a {
     /* z-index: -1; */
 }
 
+
 .projects-area>section {
     margin-top: 3vh;
     display: flex;
@@ -273,7 +274,8 @@ a {
 
 .projects {
     position: relative;
-    width: 350px;
+    padding: 1rem 0;
+    width: 390px;
     height: 200px;
     border-radius: 5px;
     display: flex;
