@@ -10,10 +10,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.nav-link').forEach(link => {
         // let docStates = document.querySelector(`[data-location]`)
+        if (link.innerHTML === 'Contato') return;
         link.addEventListener('click', () => {
             let target = link.innerHTML.toLocaleLowerCase();
-            let location = document.querySelector(`[data-location="${target}"]`)
-            window.location.href = "#" + location.id;
+            let element = document.querySelector(`[data-location="${target}"]`)
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
             closeNav();
         })
     })

@@ -9,7 +9,13 @@
 
 <url>
   <loc>https://brunonunes.site/</loc>
-  <lastmod>2023-12-03T15:12:09+00:00</lastmod>
+  <lastmod>2023-12-14T20:47:10+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://brunonunes.site/pages/contato/</loc>
+  <lastmod>2023-12-14T20:47:10+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 
 
