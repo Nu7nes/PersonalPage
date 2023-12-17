@@ -67,7 +67,6 @@ function renderTechs(obj) {
 async function renderProjects() {
     let projectsDiv = document.getElementById("personal-projects");
     const repos = await getApi();
-    console.log(repos);
     repos.forEach((repo) => {
         let element = document.createElement("div");
         element.id = repo.name;
