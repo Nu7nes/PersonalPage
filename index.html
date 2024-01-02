@@ -68,7 +68,7 @@
           </button>
           <ul id="navbar-links-toggle" class="navbar-links">
             <li class="nav-link">Sobre mim</li>
-            <!-- <li class="nav-link">Jornada</li> -->
+            <li class="nav-link">Jornada</li>
             <li class="nav-link">Projetos</li>
             <a class="nav-link" href="./pages/contato">Contato</a>
           </ul>
@@ -79,7 +79,12 @@
             <h1>ME CHAME DE NUNES</h1>
             <p>Transformando ideias em realidade digital.</p>
           </div>
-          <img class="avatar-img" src="./assets/avatar1.png" alt="avatar" />
+          <img
+            class="avatar-img"
+            src="./assets/avatar1.png"
+            min-height="300px"
+            alt="avatar"
+          />
         </section>
       </div>
       <main id="content" class="">
@@ -122,66 +127,69 @@
           <figure id="my-techs"></figure>
         </article>
 
-        <article class="container journey-area">
+        <article class="container journey-area" data-location="jornada">
           <h2 class="h2">JORNADA</h2>
           <p class="p">Conheça um pouco da minha trajetória.</p>
-          <section id="my-journey">
-
+          <section id="my-journey" class="dragscroll">
             <div class="journey-item">
               <div>
-                <h3>2021</h3>
+                <h3>2013 🎓</h3>
                 <p>
-                  Iniciei minha jornada como desenvolvedor web, estudando
-                  tecnologias como HTML, CSS, JavaScript, PHP, MySQL, ReactJS,
-                  NodeJS, entre outras.
+                  Encerro o ensino médio e dou tchau para os corredores da
+                  escola. Um capítulo fechado, mas cheio de memórias incríveis!
                 </p>
               </div>
             </div>
 
             <div class="journey-item">
               <div>
-                <h3>2021</h3>
+                <h3>2014 - 2019 🛒</h3>
                 <p>
-                  Iniciei minha jornada como desenvolvedor web, estudando
-                  tecnologias como HTML, CSS, JavaScript, PHP, MySQL, ReactJS,
-                  NodeJS, entre outras.
+                  Nesse período atuo principalmente no setor comercial, de
+                  atendente em pastelaria a vendedor em rede varejista.
                 </p>
               </div>
             </div>
 
             <div class="journey-item">
               <div>
-                <h3>2021</h3>
+                <h3>2014 🛒</h3>
                 <p>
-                  Iniciei minha jornada como desenvolvedor web, estudando
-                  tecnologias como HTML, CSS, JavaScript, PHP, MySQL, ReactJS,
-                  NodeJS, entre outras.
+                  Passo a atuar também como feirante autônomo, sendo mais uma
+                  experiência com publico em geral. Algo que faço até hoje.
                 </p>
               </div>
             </div>
 
             <div class="journey-item">
               <div>
-                <h3>2021</h3>
+                <h3>2021 💻</h3>
                 <p>
-                  Iniciei minha jornada como desenvolvedor web, estudando
-                  tecnologias como HTML, CSS, JavaScript, PHP, MySQL, ReactJS,
-                  NodeJS, entre outras.
+                  Inicio meus estudos na programação. Desde novo tenho interece
+                  na área e finalmente decido arriscar!
                 </p>
               </div>
             </div>
 
             <div class="journey-item">
               <div>
-                <h3>2021</h3>
+                <h3>2023 📚</h3>
                 <p>
-                  Iniciei minha jornada como desenvolvedor web, estudando
-                  tecnologias como HTML, CSS, JavaScript, PHP, MySQL, ReactJS,
-                  NodeJS, entre outras.
+                  Ingresso no curso de Análise e Desenvolvimento de Sistemas.
+                  Novos horizontes se abrindo!
                 </p>
               </div>
             </div>
-              
+
+            <div class="journey-item">
+              <div>
+                <h3>2023 💼</h3>
+                <p>
+                  Iniciei minha jornada como freelancer. Flexibilidade e
+                  desafios se misturam nessa nova fase da minha vida!
+                </p>
+              </div>
+            </div>
           </section>
         </article>
 
@@ -261,6 +269,7 @@
       </main>
     </main>
     <!-- <script src="/path/to/photoviewer.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dragscroll/0.0.8/dragscroll.min.js"></script>
     <script src="./scripts/vendor.js"></script>
     <script src="./scripts/data.js"></script>
     <script src="./scripts/interface.js"></script>

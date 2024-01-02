@@ -15,7 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
             let target = link.innerHTML.toLocaleLowerCase();
             let element = document.querySelector(`[data-location="${target}"]`)
             console.log(element);
-            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'start'});
             closeNav();
         })
     })
