@@ -91,6 +91,7 @@ async function renderProjects() {
                           </div>`;
     projectsDiv.appendChild(element);
   });
+
 }
 
 function renderIconTechs(array) {
