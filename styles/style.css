@@ -294,7 +294,6 @@ a {
 .techs-icons > figure > i {
   font-size: 4em;
   color: rgb(208, 208, 208);
-  /* filter: opacity(90%) brightness(30%) contrast(70%) saturate(70%); */
 }
 
 .icons-events {
@@ -344,7 +343,6 @@ a {
   height: 25rem;
   min-height: 20rem;
   display: flex;
-  /* gap: 3vw; */
   justify-content: flex-start;
   align-items: flex-start;
   overflow-y: hidden;
@@ -354,6 +352,12 @@ a {
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05);
   border-radius: 3rem;
   border: #d1d1d1 solid 1px;
+  background-image: url("../assets/plane-bg.jpg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: luminosity;
 }
 
 .journey-area > section:active {
@@ -369,35 +373,34 @@ a {
 }
 
 .journey-item {
-  /* margin-top: 4vh; */
   min-width: 20rem;
   max-width: 20rem;
   position: relative;
 }
 .journey-item > div {
   padding: 0.6rem 1rem;
-  background-color: #064eca11;
+  background-color: #00286d70;
   border-radius: 5px;
   margin: 1rem;
   margin-right: 2rem;
   height: 9rem;
-
+  backdrop-filter: blur(4px);
 }
 
 .journey-item:nth-child(odd) {
-  border-bottom: 2px solid #064eca;
+  border-bottom: 2px solid #3c7de7;
   transform: translateY(-49.3%);
 }
 
 .journey-item:nth-child(even) {
-  border-top: 2px solid #064eca;
+  border-top: 2px solid #3c7de7;
   transform: translateY(49.3%);
 }
 
 .journey-item:nth-child(odd)::before,
 .journey-item:nth-child(even)::before {
   content: "";
-  background: #064eca;
+  background: #3c7de7;
   width: 2px;
   height: 75%;
   position: absolute;
@@ -413,7 +416,7 @@ a {
 .journey-item:nth-child(odd)::after,
 .journey-item:nth-child(even)::after {
   content: "";
-  background: #064eca;
+  background: #3c7de7;
   width: 0.8rem;
   height: 0.8rem;
   border-radius: 50%;
@@ -427,10 +430,10 @@ a {
 }
 
 .journey-item > div > h3 {
-  color: #064eca;
+  color: #fff;
 }
 .journey-item > div > p {
-  color: #000000;
+  color: #fff;
 }
 
 /* projects */
@@ -440,7 +443,6 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* z-index: -1; */
 }
 
 .projects-area > section {
@@ -644,17 +646,8 @@ a {
 
   /* header information */
   .header-info {
-    /* display: flex;
-        flex-direction: row;
-        /* justify-content: center; */
     flex-wrap: wrap;
-    /* padding: 6% 0% 0 10%; */
   }
-
-  /* .header-text { */
-  /* width: 100%; */
-  /* max-width: 300px; */
-  /* } */
 
   .header-text > h1 {
     font-size: 50px;

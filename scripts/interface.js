@@ -68,17 +68,7 @@ function renderTechs(obj) {
 async function renderProjects() {
   let projectsDiv = document.getElementById("my-projects");
   const repos = await getApi();
-  console.log(repos);
   repos.forEach((repo) => {
-    // const images = false;
-    // if (repo.name === "mvp-front-end")
-    //   images = [
-    //     {
-    //       src: "https://github.com/Nu7nes/mvp-front-end/blob/main/_DOCUMENTOS/Screenshots/001.png?raw=true",
-    //       title: "Captura de tela 1",
-    //     }
-    //   ];
-
     let element = document.createElement("div");
     element.id = repo.name;
     element.classList = "projects";
@@ -96,7 +86,7 @@ async function renderProjects() {
                                 <span class="material-symbols-outlined">
                                     arrow_outward
                                 </span>
-                                <a href=${repo.html_url}>Repositório</a>
+                                <a href=${repo.html_url} target="_blank">Repositório</a>
                                 </label>
                           </div>`;
     projectsDiv.appendChild(element);

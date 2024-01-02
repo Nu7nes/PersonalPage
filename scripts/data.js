@@ -36,57 +36,51 @@ const selectedRepos = [
     },
 ];
 
-function newTechs(name, description) {
-    return {
-        name,
-        description,
-    };
-}
 const techs = [
-    newTechs(
-        "html5",
-        "HTML5 é a última versão da linguagem de marcação HTML utilizada para criar e estruturar páginas na web, suportando novos recursos multimídia."
-    ),
-    newTechs(
-        "css3",
-        "CSS3 é a última versão da linguagem de estilo utilizada para estilizar páginas na web, permitindo mais controle e recursos visuais avançados."
-    ),
-    newTechs(
-        "javascript",
-        "JavaScript é uma linguagem de programação usada para criar e controlar comportamentos interativos em páginas da web e aplicativos."
-    ),
-    newTechs(
-        "firebase",
-        "Firebase é uma plataforma do Google que fornece serviços para desenvolvedores construírem aplicativos móveis e web de alta qualidade, escaláveis e seguros."
-    ),
-    newTechs(
-        "jquery",
-        "jQuery é uma biblioteca JavaScript popular usada para simplificar a manipulação de elementos HTML, animações, eventos e interações do usuário."
-    ),
-    newTechs(
-        "bootstrap",
-        "Bootstrap é um framework front-end popular usado para criar sites responsivos e móveis, fornecendo uma estrutura de design pré-construída e personalizável."
-    ),
-    newTechs(
-        "nodejs",
-        "Node.js é uma plataforma de desenvolvimento de aplicativos baseada em JavaScript usada para criar aplicativos de servidor escaláveis e de alta performance."
-    ),
-    newTechs(
-        "mongodb",
-        "O MongoDB é um banco de dados NoSQL de alto desempenho e escalável, usado para armazenar e gerenciar dados de aplicativos modernos."
-    ),
-    newTechs(
-        "react",
-        "React é uma biblioteca JavaScript popular usada para criar interfaces de usuário interativas e reutilizáveis, permitindo uma renderização eficiente."
-    ),
-    newTechs(
-        "redux",
-        "Redux é uma biblioteca de gerenciamento de estado para aplicativos JavaScript, usada para gerenciar e atualizar dados de maneira previsível e escalável."
-    ),
-    newTechs(
-        "electron",
-        "Electron é um framework para criação de aplicativos desktop multiplataforma usando tecnologias web como HTML, CSS e JavaScript."
-    ),
+    {
+        name:"html5",
+        description:"HTML5 é a última versão da linguagem de marcação HTML utilizada para criar e estruturar páginas na web, suportando novos recursos multimídia."
+    },
+    {
+        name:"css3",
+        description:"CSS3 é a última versão da linguagem de estilo utilizada para estilizar páginas na web, permitindo mais controle e recursos visuais avançados."
+    },
+    {
+        name:"javascript",
+        description:"JavaScript é uma linguagem de programação usada para criar e controlar comportamentos interativos em páginas da web e aplicativos."
+    },
+    {
+        name:"firebase",
+        description:"Firebase é uma plataforma do Google que fornece serviços para desenvolvedores construírem aplicativos móveis e web de alta qualidade, escaláveis e seguros."
+    },
+    {
+        name:"jquery",
+        description:"jQuery é uma biblioteca JavaScript popular usada para simplificar a manipulação de elementos HTML, animações, eventos e interações do usuário."
+    },
+    {
+        name:"bootstrap",
+        description:"Bootstrap é um framework front-end popular usado para criar sites responsivos e móveis, fornecendo uma estrutura de design pré-construída e personalizável."
+    },
+    {
+        name:"nodejs",
+        description:"Node.js é uma plataforma de desenvolvimento de aplicativos baseada em JavaScript usada para criar aplicativos de servidor escaláveis e de alta performance."
+    },
+    {
+        name:"mongodb",
+        description:"O MongoDB é um banco de dados NoSQL de alto desempenho e escalável, usado para armazenar e gerenciar dados de aplicativos modernos."
+    },
+    {
+        name:"react",
+        description:"React é uma biblioteca JavaScript popular usada para criar interfaces de usuário interativas e reutilizáveis, permitindo uma renderização eficiente."
+    },
+    {
+        name:"redux",
+        description:"Redux é uma biblioteca de gerenciamento de estado para aplicativos JavaScript, usada para gerenciar e atualizar dados de maneira previsível e escalável."
+    },
+    {
+        name:"electron",
+        description:"Electron é um framework para criação de aplicativos desktop multiplataforma usando tecnologias web como HTML, CSS e JavaScript."
+    }
 ];
 
 async function getApi() {
