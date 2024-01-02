@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
+
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="icon" type="image/png" href="./assets/logo.png" />
+    <title>Bruno Nunes | Desenvolvedor</title>
+  </head>
+
+  <body>
+    <div class="loader">
+      <div class="loader-element"></div>
+    </div>
+    <button
+      id="btn-top"
+      class="btn-top btn-top-hide"
+      type="button"
+      onclick="topFunction()"
+    >
+      <span class="material-symbols-outlined"> arrow_upward </span>
+    </button>
+
+    <main data-location="sobre mim">
+      <!-- header (nav + header) -->
+      <div class="back-blue d-flex w-100">
+        <!-- navgation menu mobile -->
+        <nav id="nav-column-toggle" class="nav-column">
+          <div class="back-blue">
+            <button id="close-nav" class="btn-close" aria-label="Menu lateral" onclick="closeNav()">
+              <span class="material-symbols-outlined"> close </span>
+            </button>
+            <p>Menu</p>
+            <ul id="nav-column-list"></ul>
+          </div>
+        </nav>
+
+        <!-- navigation menu to desktop -->
+        <header id="navbar" class="navbar navbar-transparent container">
+          <a href="/" aria-label="Página inicial do site">
+            <img
+              class="logo-img"
+              src="./assets/logo.png"
+              alt="logo"
+              width="50vw"
+            />
+          </a>
+
+          <button id="nav-btn-toggle" class="nav-toggle">
+            <span class="material-symbols-outlined"> menu </span>
+          </button>
+          <ul id="navbar-links-toggle" class="navbar-links">
+            <li class="nav-link">Sobre mim</li>
+            <li class="nav-link">Jornada</li>
+            <li class="nav-link">Projetos</li>
+            <a class="nav-link" aria-label="Entre em contato" href="./pages/contato">Contato</a>
+          </ul>
+        </header>
+        <section id="home" class="header-info container">
+          <div class="header-text">
+            <h3>OLÁ!</h3>
+            <h1>ME CHAME DE NUNES</h1>
+            <p>Transformando ideias em realidade digital.</p>
+          </div>
+          <img
+            class="avatar-img"
+            src="./assets/avatar1.png"
+            min-height="300px"
+            alt="avatar"
+          />
+        </section>
+      </div>
+      <main id="content" class="">
+        <article class="article container">
+          <section>
+            <p class="color-test">
+              Bem-vindo ao meu mundo! Sou um desenvolvedor full stack apaixonado
+              por criar soluções inovadoras e funcionais. Estou aqui para
+              transformar necessidades em experiências excepcionais.
+            </p>
+            <div class="group-button">
+              <button type="button">
+                <a href="https://www.linkedin.com/in/nu7nes" aria-label="Visite meu Linkedin" target="_blank">
+                  <i class="devicon-linkedin-plain"></i>
+                  Linkedin
+                </a>
+              </button>
+              <button type="button">
+                <a href="https://github.com/nu7nes" aria-label="Visite meu GitHub" target="_blank">
+                  <i class="devicon-github-original"></i>
+                  GitHub
+                </a>
+              </button>
+            </div>
+          </section>
+          <span class="divider"></span>
+          <section>
+            <p class="color-test">
+              Meu objetivo é criar experiências digitais que não apenas
+              impressionem, mas também funcionem de forma excepcional e agreguem
+              valor a negócios e projetos ao redor do mundo.
+            </p>
+          </section>
+        </article>
+
+        <article class="container techs-icons">
+          <h2 class="h2">TECNOLOGIAS</h2>
+          <p class="p">Abaixo estão algumas das tecnologias que utilizo.</p>
+          <p class="p">Clique nos icones e descubra um pouco mais!</p>
+          <figure id="my-techs"></figure>
+        </article>
+
+        <article class="container journey-area" data-location="jornada">
+          <h2 class="h2">JORNADA</h2>
+          <p class="p">Conheça um pouco da minha trajetória.</p>
+          <section id="my-journey" class="dragscroll">
+            <div class="journey-item">
+              <div>
+                <h3>2013 🎓</h3>
+                <p>
+                  Encerro o ensino médio e dou tchau para os corredores da
+                  escola. Um capítulo fechado, mas cheio de memórias incríveis!
+                </p>
+              </div>
+            </div>
+
+            <div class="journey-item">
+              <div>
+                <h3>2014 - 2019 🛒</h3>
+                <p>
+                  Nesse período atuo principalmente no setor comercial, de
+                  atendente em pastelaria a vendedor em rede varejista.
+                </p>
+              </div>
+            </div>
+
+            <div class="journey-item">
+              <div>
+                <h3>2014 🛒</h3>
+                <p>
+                  Passo a atuar também como feirante autônomo, sendo mais uma
+                  experiência com publico em geral. Algo que faço até hoje.
+                </p>
+              </div>
+            </div>
+
+            <div class="journey-item">
+              <div>
+                <h3>2021 💻</h3>
+                <p>
+                  Inicio meus estudos na programação. Desde novo tenho interece
+                  na área e finalmente decido arriscar!
+                </p>
+              </div>
+            </div>
+
+            <div class="journey-item">
+              <div>
+                <h3>2023 📚</h3>
+                <p>
+                  Ingresso no curso de Análise e Desenvolvimento de Sistemas.
+                  Novos horizontes se abrindo!
+                </p>
+              </div>
+            </div>
+
+            <div class="journey-item">
+              <div>
+                <h3>2023 💼</h3>
+                <p>
+                  Iniciei minha jornada como freelancer. Flexibilidade e
+                  desafios se misturam nessa nova fase da minha vida!
+                </p>
+              </div>
+            </div>
+          </section>
+        </article>
+
+        <article
+          id="projects"
+          data-location="projetos"
+          class="container projects-area"
+        >
+          <h2 class="h2">PROJETOS</h2>
+          <p class="p">Explore meu portfólio.</p>
+          <section id="my-projects"></section>
+        </article>
+
+        <footer
+          id="footer"
+          data-location="contato"
+          class="footer back-dark-blue d-flex w-100"
+        >
+          <article class="container">
+            <section>
+              <p style="width: 80%">
+                Durante toda a minha trajetória profissional, atuei no setor
+                comercial, tanto como colaborador em empresas quanto como
+                profissional autônomo. Atualmente posso conciliar a paixão por
+                desenvolver com toda minha experiência para oferecer o melhor de
+                mim.
+              </p>
+              <div>
+                <a href="https://www.linkedin.com/in/nu7nes" aria-label="Visite meu Linkedin" target="_blank">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="3rem"
+                    height="3rem"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill="#fff"
+                      d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6s9.6-4.298 9.6-9.6S15.302.4 10 .4M7.65 13.979H5.706V7.723H7.65zm-.984-7.024c-.614 0-1.011-.435-1.011-.973c0-.549.409-.971 1.036-.971s1.011.422 1.023.971c0 .538-.396.973-1.048.973m8.084 7.024h-1.944v-3.467c0-.807-.282-1.355-.985-1.355c-.537 0-.856.371-.997.728c-.052.127-.065.307-.065.486v3.607H8.814v-4.26c0-.781-.025-1.434-.051-1.996h1.689l.089.869h.039c.256-.408.883-1.01 1.932-1.01c1.279 0 2.238.857 2.238 2.699z"
+                    />
+                  </svg>
+                </a>
+                <a href="https://www.instagram.com/nu7nes" aria-label="Visite meu Instagram" target="_blank">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="3rem"
+                    height="3rem"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill="#fff"
+                      d="M13 10a3 3 0 1 1-6 0c0-.171.018-.338.049-.5H6v3.997c0 .278.225.503.503.503h6.995a.503.503 0 0 0 .502-.503V9.5h-1.049c.031.162.049.329.049.5m-3 2a2 2 0 1 0-.001-4.001A2 2 0 0 0 10 12m2.4-4.1h1.199a.301.301 0 0 0 .301-.3V6.401a.301.301 0 0 0-.301-.301H12.4a.301.301 0 0 0-.301.301V7.6c.001.165.136.3.301.3M10 .4A9.6 9.6 0 0 0 .4 10a9.6 9.6 0 0 0 9.6 9.6a9.6 9.6 0 0 0 9.6-9.6A9.6 9.6 0 0 0 10 .4m5 13.489C15 14.5 14.5 15 13.889 15H6.111C5.5 15 5 14.5 5 13.889V6.111C5 5.5 5.5 5 6.111 5h7.778C14.5 5 15 5.5 15 6.111z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </section>
+            <figure class="photo-me">
+              <img src="./assets/20220607_200100.jpg" alt="my-photo" />
+            </figure>
+          </article>
+        </footer>
+      </main>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dragscroll/0.0.8/dragscroll.min.js"></script>
+    <script src="./scripts/data.js"></script>
+    <script src="./scripts/interface.js"></script>
+    <script src="./scripts/actions.js"></script>
+  </body>
+</html>

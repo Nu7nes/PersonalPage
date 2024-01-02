@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', () => {
             let target = link.innerHTML.toLocaleLowerCase();
             let element = document.querySelector(`[data-location="${target}"]`)
-            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'start'});
             closeNav();
         })
     })
@@ -39,6 +39,11 @@ window.addEventListener('DOMContentLoaded', () => {
     })
 
 })
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
 
 function closeNav() {
     let nav = document.getElementById('nav-column-toggle');
