@@ -83,9 +83,12 @@ async function renderProjects() {
     let element = document.createElement("div");
     element.id = repo.name;
     element.classList = "projects";
+
+    const placeholderToImage = `<img src="assets/images/projects/${repo.name}.webp" alt="Imagem do projeto ${repo.name}">`;
+
     element.innerHTML = `<div>
                             <figure>
-                                <img src="assets/images/projects/${repo.name}.png" alt="Imagem do projeto ${repo.name}">
+                                ${repo.name === 'say-hello' ? "<p>Sem imagem!</p>" : placeholderToImage}
                             </figure>
                             <div>
                                 ${renderIconTechs(repo.technologies)}
@@ -102,7 +105,7 @@ async function renderProjects() {
                                 </span>
                                 <a href=${
                                   repo.html_url
-                                } target="_blank">Repositório</a>
+                                } target="_blank">Saiba mais</a>
                                 </label>
                           </div>`;
     projectsDiv.appendChild(element);
