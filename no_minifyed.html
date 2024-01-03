@@ -18,16 +18,12 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
     />
-
     <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="icon" type="image/png" href="./assets/logo.png" />
+    <link rel="icon" type="image/png" href="./assets/images/logos/logo.webp" />
     <title>Bruno Nunes | Desenvolvedor</title>
   </head>
 
   <body>
-    <div class="loader">
-      <div class="loader-element"></div>
-    </div>
     <button
       id="btn-top"
       class="btn-top btn-top-hide"
@@ -37,13 +33,18 @@
       <span class="material-symbols-outlined"> arrow_upward </span>
     </button>
 
-    <main data-location="sobre mim">
+    <main data-location="about">
       <!-- header (nav + header) -->
       <div class="back-blue d-flex w-100">
         <!-- navgation menu mobile -->
         <nav id="nav-column-toggle" class="nav-column">
           <div class="back-blue">
-            <button id="close-nav" class="btn-close" aria-label="Menu lateral" onclick="closeNav()">
+            <button
+              id="close-nav"
+              class="btn-close"
+              aria-label="Fechar menu lateral"
+              onclick="closeNav()"
+            >
               <span class="material-symbols-outlined"> close </span>
             </button>
             <p>Menu</p>
@@ -56,20 +57,52 @@
           <a href="/" aria-label="Página inicial do site">
             <img
               class="logo-img"
-              src="./assets/logo.png"
+              src="./assets/images/logos/logo.webp"
               alt="logo"
               width="50vw"
             />
           </a>
 
-          <button id="nav-btn-toggle" class="nav-toggle">
+          <button
+            id="nav-btn-toggle"
+            class="nav-toggle"
+            aria-label="Abrir menu lateral"
+          >
             <span class="material-symbols-outlined"> menu </span>
           </button>
           <ul id="navbar-links-toggle" class="navbar-links">
-            <li class="nav-link">Sobre mim</li>
-            <li class="nav-link">Jornada</li>
-            <li class="nav-link">Projetos</li>
-            <a class="nav-link" aria-label="Entre em contato" href="./pages/contato">Contato</a>
+            <li
+              class="nav-link isActiveLink"
+              aria-label="Ir para o início"
+              data-target="about"
+            >
+              <span class="material-symbols-outlined"> mood </span>
+              Sobre mim
+            </li>
+            <li
+              class="nav-link"
+              aria-label="Conheça minha jornada"
+              data-target="journey"
+            >
+              <span class="material-symbols-outlined"> explore </span>
+              Jornada
+            </li>
+            <li
+              class="nav-link"
+              aria-label="Conheça meus projetos"
+              data-target="projects"
+            >
+              <span class="material-symbols-outlined"> checklist_rtl </span>
+              Projetos
+            </li>
+            <a
+              class="nav-link"
+              aria-label="Entre em contato"
+              href="./pages/contato"
+            >
+              <span class="material-symbols-outlined"> alternate_email </span>
+              Contato</a
+            >
           </ul>
         </header>
         <section id="home" class="header-info container">
@@ -80,7 +113,7 @@
           </div>
           <img
             class="avatar-img"
-            src="./assets/avatar1.png"
+            src="./assets/images/avatar.webp"
             min-height="300px"
             alt="avatar"
           />
@@ -96,13 +129,21 @@
             </p>
             <div class="group-button">
               <button type="button">
-                <a href="https://www.linkedin.com/in/nu7nes" aria-label="Visite meu Linkedin" target="_blank">
+                <a
+                  href="https://www.linkedin.com/in/nu7nes"
+                  aria-label="Visite meu Linkedin"
+                  target="_blank"
+                >
                   <i class="devicon-linkedin-plain"></i>
                   Linkedin
                 </a>
               </button>
               <button type="button">
-                <a href="https://github.com/nu7nes" aria-label="Visite meu GitHub" target="_blank">
+                <a
+                  href="https://github.com/nu7nes"
+                  aria-label="Visite meu GitHub"
+                  target="_blank"
+                >
                   <i class="devicon-github-original"></i>
                   GitHub
                 </a>
@@ -126,13 +167,14 @@
           <figure id="my-techs"></figure>
         </article>
 
-        <article class="container journey-area" data-location="jornada">
+        <article class="container journey-area" data-location="journey">
           <h2 class="h2">JORNADA</h2>
           <p class="p">Conheça um pouco da minha trajetória.</p>
           <section id="my-journey" class="dragscroll">
             <div class="journey-item">
               <div>
-                <h3>2013 🎓</h3>
+                <h3>2013</h3>
+                <span>🎓</span>
                 <p>
                   Encerro o ensino médio e dou tchau para os corredores da
                   escola. Um capítulo fechado, mas cheio de memórias incríveis!
@@ -142,7 +184,8 @@
 
             <div class="journey-item">
               <div>
-                <h3>2014 - 2019 🛒</h3>
+                <h3>2014 - 2019</h3>
+                <span>🛒</span>
                 <p>
                   Nesse período atuo principalmente no setor comercial, de
                   atendente em pastelaria a vendedor em rede varejista.
@@ -152,7 +195,8 @@
 
             <div class="journey-item">
               <div>
-                <h3>2014 🛒</h3>
+                <h3>2014</h3>
+                <span>🛒</span>
                 <p>
                   Passo a atuar também como feirante autônomo, sendo mais uma
                   experiência com publico em geral. Algo que faço até hoje.
@@ -162,7 +206,8 @@
 
             <div class="journey-item">
               <div>
-                <h3>2021 💻</h3>
+                <h3>2021</h3>
+                <span>💻</span>
                 <p>
                   Inicio meus estudos na programação. Desde novo tenho interece
                   na área e finalmente decido arriscar!
@@ -172,7 +217,8 @@
 
             <div class="journey-item">
               <div>
-                <h3>2023 📚</h3>
+                <h3>2023</h3>
+                <span>📚</span>
                 <p>
                   Ingresso no curso de Análise e Desenvolvimento de Sistemas.
                   Novos horizontes se abrindo!
@@ -182,10 +228,11 @@
 
             <div class="journey-item">
               <div>
-                <h3>2023 💼</h3>
+                <h3>2023</h3>
+                <span>💼</span>
                 <p>
-                  Iniciei minha jornada como freelancer. Flexibilidade e
-                  desafios se misturam nessa nova fase da minha vida!
+                  Inicío minha jornada como freelancer. Flexibilidade e desafios
+                  se misturam nessa nova fase da minha vida!
                 </p>
               </div>
             </div>
@@ -194,7 +241,7 @@
 
         <article
           id="projects"
-          data-location="projetos"
+          data-location="projects"
           class="container projects-area"
         >
           <h2 class="h2">PROJETOS</h2>
@@ -217,7 +264,11 @@
                 mim.
               </p>
               <div>
-                <a href="https://www.linkedin.com/in/nu7nes" aria-label="Visite meu Linkedin" target="_blank">
+                <a
+                  href="https://www.linkedin.com/in/nu7nes"
+                  aria-label="Visite meu Linkedin"
+                  target="_blank"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="3rem"
@@ -230,7 +281,11 @@
                     />
                   </svg>
                 </a>
-                <a href="https://www.instagram.com/nu7nes" aria-label="Visite meu Instagram" target="_blank">
+                <a
+                  href="https://www.instagram.com/nu7nes"
+                  aria-label="Visite meu Instagram"
+                  target="_blank"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="3rem"
@@ -246,12 +301,14 @@
               </div>
             </section>
             <figure class="photo-me">
-              <img src="./assets/20220607_200100.jpg" alt="my-photo" />
+              <img src="./assets/images/perfil.webp" alt="my-photo" />
             </figure>
           </article>
         </footer>
       </main>
     </main>
+
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dragscroll/0.0.8/dragscroll.min.js"></script>
     <script src="./scripts/data.js"></script>
     <script src="./scripts/interface.js"></script>
