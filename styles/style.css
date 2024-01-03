@@ -6,26 +6,7 @@
   font-family: "Outfit", sans-serif;
 }
 
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-  max-height: 6px;
-}
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #2264d6;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #064eca;
-}
 
 .btn-top {
   position: fixed;
@@ -85,7 +66,8 @@ main {
   padding: 0.7em 2em;
   position: fixed;
   top: 0;
-  background: rgb(66, 129, 234);
+  background-color: transparent;
+  /* background: rgb(66, 129, 234);
   background: -moz-linear-gradient(
     330deg,
     rgba(66, 129, 234, 1) 0%,
@@ -101,12 +83,33 @@ main {
     rgba(66, 129, 234, 1) 0%,
     rgba(34, 110, 217, 1) 100%
   );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4281ea", endColorstr="#226ed9", GradientType=1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4281ea", endColorstr="#226ed9", GradientType=1); */
 }
 
-.navbar-transparent {
-  background-color: transparent !important;
-  background: none !important;
+.navbar-colored {
+  background-color: #3177E1 !important;
+}
+
+.navbar-colored::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #3177E1;
+  z-index: -1;
+}
+
+.navbar-colored::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #3177E1;
+  z-index: -1;
 }
 
 .nav-toggle {
@@ -122,6 +125,15 @@ main {
 .nav-link {
   cursor: pointer;
   list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 200ms ease-in-out;
+
+}
+
+.nav-link > span {
+  display: none;
 }
 
 .nav-column {
@@ -336,11 +348,10 @@ a {
 
 .journey-area > section {
   margin-top: 4vh;
-  padding: 7rem 2rem 0 2rem;
+  padding: 7rem 0 0 2rem;
   width: 100%;
   max-width: 90vw;
-
-  height: 25rem;
+  height: 26rem;
   min-height: 20rem;
   display: flex;
   justify-content: flex-start;
@@ -352,7 +363,7 @@ a {
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05);
   border-radius: 3rem;
   border: #d1d1d1 solid 1px;
-  background-image: url("../assets/plane-bg.jpg");
+  background-image: url("../assets/images/plane-bg.webp");
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -383,7 +394,7 @@ a {
   border-radius: 5px;
   margin: 1rem;
   margin-right: 2rem;
-  height: 9rem;
+  height: 10rem;
   backdrop-filter: blur(4px);
 }
 
@@ -431,9 +442,26 @@ a {
 
 .journey-item > div > h3 {
   color: #fff;
+  background-color: #3c7de7;
+  width: fit-content;
+  padding: 0.2rem 1rem;
+  border-radius: 2rem;
+  transform: translateX(-3rem);
 }
+
+.journey-item > div > span {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: #d7e6ff;
+  padding: 0.3rem 0.3rem;
+  border-radius: 2rem;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
+}
+
 .journey-item > div > p {
   color: #fff;
+  margin-top: 0.6rem;
 }
 
 /* projects */
@@ -456,9 +484,9 @@ a {
 
 .projects {
   position: relative;
-  padding: 1rem 0;
+  padding: 0 0 1rem 0;
   width: 390px;
-  height: 200px;
+  /* height: 200px; */
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -469,6 +497,22 @@ a {
 
 .projects > div {
   padding: 1rem;
+}
+
+.projects > div > figure {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: grey;
+  border: 1px solid #ffffff;
+}
+
+.projects > div > figure > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .projects > div > div {
@@ -644,6 +688,11 @@ a {
     font-size: 1.4em;
   }
 
+  .nav-link > span {
+    font-size: 0.9em;
+    display: block;
+  }
+
   /* header information */
   .header-info {
     flex-wrap: wrap;
@@ -728,45 +777,41 @@ a {
 }
 
 /* classes padrões */
-.loader {
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 100;
-  background: rgb(105, 152, 255);
-  background: -moz-linear-gradient(
-    330deg,
-    rgba(105, 152, 255, 1) 0%,
-    rgba(34, 110, 217, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    330deg,
-    rgba(105, 152, 255, 1) 0%,
-    rgba(34, 110, 217, 1) 100%
-  );
-  background: linear-gradient(
-    330deg,
-    rgba(105, 152, 255, 1) 0%,
-    rgba(34, 110, 217, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6998ff", endColorstr="#226ed9", GradientType=1);
+.isActiveLink {
+  background-color: #ffffff !important;
+  color: #2264d6 !important;
+
+  border-radius: 10px;
+  padding: 0.5em 1em;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+  transition: all 200ms ease-in-out;
 }
 
-.loader-element {
-  width: 10vw;
-  height: 10vw;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  border-color: #1c55b2;
-  border-top: 0.5vw solid #ffffff;
-  border-style: outset;
-  animation: loader 500ms linear infinite;
+.isActiveLink > span {
+  color: #2264d6 !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  max-height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #2264d6;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #064eca;
 }
 
 .container {
@@ -847,20 +892,6 @@ a {
 
   to {
     right: -100%;
-  }
-}
-
-@keyframes loader {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  50% {
-    transform: rotate(180deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
   }
 }
 

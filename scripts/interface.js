@@ -1,17 +1,16 @@
 window.addEventListener("DOMContentLoaded", async () => {
   let widthScreen = window.innerWidth;
-  if (widthScreen < 600) mobileScreen();
+  if (widthScreen < 700) mobileScreen();
 
   window.addEventListener("resize", () => {
-    if (widthScreen < 600) mobileScreen();
+    if (widthScreen < 700) mobileScreen();
   });
   window.addEventListener("scroll", () => {
+    changeClassOnLinks();
     if (window.scrollY > 10) {
-      document.getElementById("navbar").classList.remove("navbar-transparent");
-      document.getElementById("btn-top").classList.remove("btn-top-hide");
+      document.getElementById("navbar").classList.add("navbar-colored");
     } else {
-      document.getElementById("navbar").classList.add("navbar-transparent");
-      document.getElementById("btn-top").classList.add("btn-top-hide");
+      document.getElementById("navbar").classList.remove("navbar-colored");
     }
     if (window.scrollY > 300) {
       document.getElementById("btn-top").classList.remove("btn-top-hide");
@@ -21,8 +20,20 @@ window.addEventListener("DOMContentLoaded", async () => {
   });
   renderTechs(techs);
   await renderProjects();
-  document.getElementsByClassName("loader")[0].remove();
 });
+
+function changeClassOnLinks() {
+  document.querySelectorAll("[data-location]").forEach((article) => {
+    const loc = article.getBoundingClientRect().top;
+    if (loc <= 200) {
+      removeIsActiveClass();
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        if (link.dataset.target === article.dataset.location)
+          link.classList.add("isActiveLink");
+      });
+    }
+  });
+}
 
 function mobileScreen() {
   let navColumn = document.getElementById("nav-column-list");
@@ -73,6 +84,9 @@ async function renderProjects() {
     element.id = repo.name;
     element.classList = "projects";
     element.innerHTML = `<div>
+                            <figure>
+                                <img src="assets/images/projects/${repo.name}.png" alt="Imagem do projeto ${repo.name}">
+                            </figure>
                             <div>
                                 ${renderIconTechs(repo.technologies)}
                             </div>
@@ -86,12 +100,13 @@ async function renderProjects() {
                                 <span class="material-symbols-outlined">
                                     arrow_outward
                                 </span>
-                                <a href=${repo.html_url} target="_blank">Repositório</a>
+                                <a href=${
+                                  repo.html_url
+                                } target="_blank">Repositório</a>
                                 </label>
                           </div>`;
     projectsDiv.appendChild(element);
   });
-
 }
 
 function renderIconTechs(array) {
