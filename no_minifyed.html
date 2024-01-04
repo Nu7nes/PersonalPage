@@ -14,6 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
@@ -53,7 +54,13 @@
         </nav>
 
         <!-- navigation menu to desktop -->
-        <header id="navbar" class="navbar navbar-transparent container">
+        <header
+          id="navbar"
+          data-aos="zoom-out"
+          data-aos-duration="500"
+          data-aos-delay="500"
+          class="navbar container"
+        >
           <a href="/" aria-label="Página inicial do site">
             <img
               class="logo-img"
@@ -106,12 +113,15 @@
           </ul>
         </header>
         <section id="home" class="header-info container">
-          <div class="header-text">
+          <div class="header-text" data-aos="fade-down" data-aos-duration="500">
             <h3>OLÁ!</h3>
             <h1>ME CHAME DE NUNES</h1>
-            <p>Transformando ideias em realidade digital.</p>
+            <p>Construindo o futuro, linha a linha, do real ao digital.</p>
           </div>
           <img
+            data-aos="fade-left"
+            data-aos-duration="500"
+            data-aos-delay="200"
             class="avatar-img"
             src="./assets/images/avatar.webp"
             min-height="300px"
@@ -120,7 +130,11 @@
         </section>
       </div>
       <main id="content" class="">
-        <article class="article container">
+        <article
+          class="article container"
+          data-aos="fade-up"
+          data-aos-duration="500"
+        >
           <section>
             <p class="color-test">
               Bem-vindo ao meu mundo! Sou um desenvolvedor full stack apaixonado
@@ -160,17 +174,32 @@
           </section>
         </article>
 
-        <article class="container techs-icons">
+        <article
+          class="container techs-icons"
+          data-aos="fade-up"
+          data-aos-duration="500"
+        >
           <h2 class="h2">TECNOLOGIAS</h2>
           <p class="p">Abaixo estão algumas das tecnologias que utilizo.</p>
           <p class="p">Clique nos icones e descubra um pouco mais!</p>
           <figure id="my-techs"></figure>
         </article>
 
-        <article class="container journey-area" data-location="journey">
+        <article
+          class="container journey-area"
+          data-location="journey"
+          data-aos="fade-up"
+          data-aos-duration="500"
+        >
           <h2 class="h2">JORNADA</h2>
           <p class="p">Conheça um pouco da minha trajetória.</p>
-          <section id="my-journey" class="dragscroll">
+          <section
+            id="my-journey"
+            class="dragscroll"
+            data-aos="fade-up"
+            data-aos-duration="500"
+            data-aos-delay="200"
+            >
             <div class="journey-item">
               <div>
                 <h3>2013</h3>
@@ -243,6 +272,8 @@
           id="projects"
           data-location="projects"
           class="container projects-area"
+          data-aos="fade-up"
+          data-aos-duration="500"
         >
           <h2 class="h2">PROJETOS</h2>
           <p class="p">Explore meu portfólio.</p>
@@ -308,10 +339,13 @@
       </main>
     </main>
 
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dragscroll/0.0.8/dragscroll.min.js"></script>
     <script src="./scripts/data.js"></script>
     <script src="./scripts/interface.js"></script>
     <script src="./scripts/actions.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

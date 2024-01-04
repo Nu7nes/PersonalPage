@@ -49,9 +49,15 @@ function clearColorize() {
 
 function renderTechs(obj) {
   let element = document.getElementById("my-techs");
+  let delay = 0;
 
   obj.forEach((el) => {
+    delay += 100;
     let iconElement = document.createElement("i");
+    iconElement.setAttribute("data-aos", "fade-up");
+    iconElement.setAttribute("data-aos-duration", "600");
+    iconElement.setAttribute("data-aos-delay", delay.toString());
+
     let descElement = document.createElement("div");
 
     iconElement.id = el.name;
@@ -78,12 +84,16 @@ function renderTechs(obj) {
 
 async function renderProjects() {
   let projectsDiv = document.getElementById("my-projects");
+  let delay = 0;
   const repos = await getApi();
   repos.forEach((repo) => {
+    delay += 100;
     let element = document.createElement("div");
     element.id = repo.name;
     element.classList = "projects";
-
+    element.setAttribute("data-aos", "fade-up");
+    element.setAttribute("data-aos-duration", "600");
+    element.setAttribute("data-aos-delay", delay.toString());
     const placeholderToImage = `<img src="assets/images/projects/${repo.name}.webp" alt="Imagem do projeto ${repo.name}">`;
 
     element.innerHTML = `<div>
