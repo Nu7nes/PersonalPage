@@ -273,6 +273,11 @@ cite {
 }
 
 @media screen and (max-width: 700px) {
+
+  body {
+    margin-bottom: 2rem;
+  }
+
   .container {
     width: 100% !important;
   }
@@ -280,15 +285,51 @@ cite {
   main {
     flex-direction: column;
     margin: 3.5rem 1rem 0 1rem;
+    justify-content: flex-start;
   }
 
   article {
     margin-left: 0;
-    margin-top: 2rem;
-    margin: 2rem;
-    padding: 4rem 2rem;
+    margin-top: 1rem;
+    padding: 2rem 2rem;
+    gap: 1rem;
   }
+
+  section {
+    gap: 0.5rem;
+  }
+
+  section > div {
+    gap: 0.5rem;
+  }
+
   section > div > h1 {
-    font-size: 3rem;
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  section > div > svg {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  section > form {
+    margin-top: 0;
+  }
+
+  cite {
+    margin-bottom: 0;
+  }
+
+  .social-links {
+    gap: 0.5rem;
+  }
+  .social-links::before {
+    margin-bottom: 0;
+  }
+
+  .sendButton {
+    font-size: 1rem;
+    padding: 0.6rem;
   }
 }
