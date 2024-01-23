@@ -545,12 +545,16 @@ a {
   margin-top: 0.6rem;
   display: flex;
   align-items: center;
-  gap: 0.2rem;
+  gap: 0.8rem;
 }
 .projects > div > label > a {
   color: #2972dd;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
 }
-.projects > div > label > span {
+.projects > div > label > a > span {
   color: #2972dd;
   font-size: 1.2rem;
 }
@@ -637,6 +641,10 @@ a {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#346cc7", endColorstr="#1d5ab1", GradientType=1);
 }
 
+.menuLinks {
+  display: none;
+}
+
 /* mobiles */
 @media screen and (max-width: 1000px) {
   .container {
@@ -691,6 +699,8 @@ a {
     display: flex;
     flex-direction: column;
     gap: 2vh;
+    height: 100%;
+    position: relative;
   }
 
   .nav-link {
@@ -700,6 +710,19 @@ a {
   .nav-link > span {
     font-size: 0.9em;
     display: block;
+  }
+
+  .menuLinks {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .menuLinks > ul {
+    display: flex;
+    list-style: none;
+    gap: 1em;
   }
 
   /* header information */
@@ -798,8 +821,8 @@ a {
   transition: all 200ms ease-in-out;
 }
 
-.isActiveLink > span {
-  color: #2264d6 !important;
+.isActiveLink > svg > path {
+  fill: #2264d6 !important;
 }
 
 /* width */

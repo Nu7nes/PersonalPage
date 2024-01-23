@@ -89,19 +89,20 @@ async function getApi() {
         .then((res) => res.json())
         .then((data) => {
             data.forEach((repo) => {
-                const { name, description, html_url } = repo;
+                const { name, description, html_url, has_pages } = repo;
                 if (selectedRepos.some((el) => el.name === name))
-                    repos.push(newProject(name, description, html_url));
+                    repos.push(newProject(name, description, html_url, has_pages));
                 // return { name, description, html_url };
             });
         });
     return repos;
 }
-function newProject(name, description, html_url) {
+function newProject(name, description, html_url, has_pages) {
     return {
         name,
         description,
         html_url,
+        has_pages,
         technologies: getTechnologies(name)
     };
 }
