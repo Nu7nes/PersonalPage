@@ -61,8 +61,9 @@ function renderTechs(obj) {
     let descElement = document.createElement("div");
 
     iconElement.id = el.name;
+    iconElement.title = el.name.toUpperCase();
     iconElement.addEventListener("click", clearColorize);
-    if (el.name === "react" || el.name === "redux" || el.name === "electron") {
+    if (el.name === "react" || el.name === "redux" || el.name === "electron" || el.name === "express") {
       iconElement.classList = `icons-events devicon-${el.name}-original`;
     } else {
       iconElement.classList = `icons-events devicon-${el.name}-plain`;

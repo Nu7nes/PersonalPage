@@ -50,6 +50,10 @@ const techs = [
         description:"JavaScript é uma linguagem de programação usada para criar e controlar comportamentos interativos em páginas da web e aplicativos."
     },
     {
+        name:"typescript",
+        description:"TypeScript é uma linguagem de programação de código aberto que é um superconjunto de JavaScript, adicionando tipagem estática e outros recursos avançados."
+    },
+    {
         name:"firebase",
         description:"Firebase é uma plataforma do Google que fornece serviços para desenvolvedores construírem aplicativos móveis e web de alta qualidade, escaláveis e seguros."
     },
@@ -62,12 +66,24 @@ const techs = [
         description:"Bootstrap é um framework front-end popular usado para criar sites responsivos e móveis, fornecendo uma estrutura de design pré-construída e personalizável."
     },
     {
+        name:"sass",
+        description:"Sass é uma linguagem de script que é interpretada ou compilada em CSS, permitindo a criação de estilos reutilizáveis e mais eficientes para páginas da web."
+    },
+    {
         name:"nodejs",
         description:"Node.js é uma plataforma de desenvolvimento de aplicativos baseada em JavaScript usada para criar aplicativos de servidor escaláveis e de alta performance."
     },
     {
+        name:"express",
+        description:"Express é um framework de aplicativo da web para Node.js usado para criar APIs e aplicativos da web, fornecendo recursos avançados de roteamento e middleware."
+    },
+    {
         name:"mongodb",
         description:"O MongoDB é um banco de dados NoSQL de alto desempenho e escalável, usado para armazenar e gerenciar dados de aplicativos modernos."
+    },
+    {
+        name:"mysql",
+        description:"MySQL é um sistema de gerenciamento de banco de dados relacional de código aberto, usado para armazenar e gerenciar dados de aplicativos de negócios."
     },
     {
         name:"react",
