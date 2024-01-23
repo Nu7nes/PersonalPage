@@ -132,7 +132,7 @@ main {
 
 }
 
-.nav-link > span {
+.nav-link > svg {
   display: none;
 }
 
@@ -707,7 +707,7 @@ a {
     font-size: 1.4em;
   }
 
-  .nav-link > span {
+  .nav-link > svg {
     font-size: 0.9em;
     display: block;
   }
@@ -715,7 +715,7 @@ a {
   .menuLinks {
     display: block;
     position: absolute;
-    bottom: 0;
+    bottom: 3rem;
     right: 0;
   }
 
