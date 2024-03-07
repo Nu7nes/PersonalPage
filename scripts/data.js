@@ -10,6 +10,15 @@ const selectedRepos = [
         ],
     },
     {
+        name: "food-menu-1",
+        techs: [
+            "vitejs",
+            "react",
+            "typescript",
+            "firebase",
+        ],
+    },
+    {
         name: "delivery-app",
         techs: [
             "javascript",
